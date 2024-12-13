@@ -1,0 +1,185 @@
+.homepage {
+  background-image: url('../../../public/images/background.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 60px;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.homepage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.65); /* Dark overlay */
+  z-index: 1;
+  box-shadow: 0 0 8px 8px black inset;
+}
+
+.homepage h1,
+.homepage h2,
+.homepage h3 {
+  position: relative;
+  color: white;
+  z-index: 2; /* Makes sure the text is above the overlay */
+}
+
+.custom-heading {
+  font-family: "Roboto", sans-serif;
+  margin: 0 auto;
+  font-size: 3rem; /* Equivalent to text-4xl in Tailwind */
+  font-weight: 700; /* Equivalent to font-bold */
+  letter-spacing: -0.015em; /* Approximation for tight tracking */
+  text-align: left;
+}
+
+.BookApptButton {
+  background-color: white;
+  color: black;
+  padding: 25px 30px;
+  border-radius: 5px;
+  z-index: 2;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.BookApptButton:hover {
+  cursor: pointer;
+}
+
+.HeroSection {
+  position: relative;
+  z-index: 2;
+  margin-top: 18%;
+}
+
+.ParaHeroSection {
+  font-family: "Cormorant Unicase", "Roboto", sans-serif;
+  font-size: 2.5rem;
+  z-index: 1;
+  margin-top: 30px;
+  margin-bottom: 80px;
+}
+
+.servicesContainer {
+  z-index: 1;
+  padding: 10px 20px;
+  margin-top: 140px;
+  border-radius: 5px;
+  margin-bottom: 40px;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 80px;
+}
+
+.serviceItem {
+  background-color: #44444C;
+  padding: 10px;
+  border-radius: 4px;
+}
+/* .reviewsContainer {
+  margin-bottom: 10px;
+  padding: 20px 20px;
+  background-color: #eeeeee;
+} */
+
+/* Location Section */
+.gallery {
+  width: 100%;
+  margin-top: 140px;
+  padding-top: 40px;
+
+ position: relative; /* Ensure it stays above the overlay */
+ z-index: 2; /* Position the gallery above the overlay */
+ box-shadow: none;
+}
+
+.gpara{
+color: whitesmoke;
+font-size:xx-large;
+}
+
+.servicesTitle {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.titles {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.right-main-section {
+  flex: 1; /* Allow this section to grow */
+  margin: 0 20px 0 20px; /* Space between left and right sections */
+  padding: 0 20px 0 20px;
+  z-index: 1;
+}
+
+.left-main-section {
+  flex: 1; /* Allow this section to grow */
+  margin: 0 20px 0 20px; /* Space between left and right sections */
+  padding: 0 20px 0 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.img-carousel{
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .homepage {
+    justify-content: space-between;
+    background-size: 160%;
+    background-position: center top;
+    padding: 50px 0;
+    margin-top: 70px;
+  }
+
+  .custom-heading {
+    font-size: 1.8rem; /* Equivalent to text-4xl in Tailwind */
+  }
+
+  .BookApptButton {
+    padding: 10px 20px;
+  }
+
+  .BookApptButton:hover {
+    cursor: pointer;
+  }
+  .ParaHeroSection {
+    font-size: 1rem;
+    margin-top: 35px;
+  }
+  .servicesGrid {
+    grid-template-columns: 1fr; /* Switch to a single column */
+    gap: 10px; /* Adjust the gap as needed */
+  }
+  .right-main-section {
+    flex: 1; /* Allow this section to grow */
+    margin: 0 20px 0 20px; /* Space between left and right sections */
+    padding: 0 20px 0 20px;
+    z-index: 1;
+    font-size: 1rem;
+  }
+
+  .left-main-section {
+    flex: 1; /* Allow this section to grow */
+    margin: 0 20px 0 20px; /* Space between left and right sections */
+    padding: 0 20px 0 20px;
+  }
+}

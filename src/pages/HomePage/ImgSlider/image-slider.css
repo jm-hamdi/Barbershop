@@ -1,0 +1,84 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.image-slider-container {
+  display: flex; /* Enables flexbox layout to align images horizontally */
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  width: 100%;
+  max-width: 900px; /* Limit the width */
+  height: 500px; /* Ensure the height matches your image size */
+  position: relative;
+  z-index: 2;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  overflow: hidden; /* Ensures only one image is shown at a time */
+  margin-left: auto; /* Center the slider horizontally */
+  margin-right: auto; /* Center the slider horizontally */
+}
+
+.img-slider-img {
+  width: 100%; /* Ensures the image takes up the full width of the container */
+  height: 500px; /* Height of each image */
+  object-fit: contain; /* Ensure the full image is shown and maintains aspect ratio */
+  flex-shrink: 0; /* Prevent images from shrinking */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for sliding images */
+}
+
+
+.img-slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 1rem;
+  z-index: 2;
+}
+
+.img-slider-btn:first-child { /* For the previous button */
+  left: 10px; /* Position on the left */
+}
+
+.img-slider-btn:last-child { /* For the next button */
+  right: 10px; /* Position on the right */
+}
+
+.img-slider-btn:hover,
+.img-slider-btn:focus-visible {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.img-slider-btn > * {
+  width: 24px;
+  height: 24px;
+}
+
+@keyframes squish {
+  50% {
+    scale: 1.4 0.6;
+  }
+}
+
+.img-slider-dot-btn {
+  all: unset;
+  display: block;
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  height: 1rem;
+  transition: scale 100ms ease-in-out;
+}
+
+.img-slider-dot-btn:hover,
+.img-slider-dot-btn:focus-visible {
+  scale: 1.2;
+}
+
+.img-slider-dot-btn > * {
+  stroke: white;
+  fill: bla
+}
+
